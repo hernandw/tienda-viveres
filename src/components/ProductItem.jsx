@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 const ProductItem = ({data}) => {
+    const navigate = useNavigate()
     const verMas = ()=>{
-        console.log('me diste click', data.id)
+        navigate(`producto/${data.id}`)
     }
    
   return (
